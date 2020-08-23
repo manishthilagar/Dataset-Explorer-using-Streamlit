@@ -20,6 +20,7 @@ choices = st.sidebar.selectbox(
     ('Show Data','Analysis', 'Visualize','Advanced')
 )
 data = st.file_uploader('________________________________________________________________________________________________',type =['csv','txt'])
+st.set_option('deprecation.showfileUploaderEncoding', False)
 
 if choices == 'Show Data':
     st.subheader("Data")
@@ -107,15 +108,7 @@ elif choices == 'Visualize':
     if st.sidebar.checkbox("Line Chart"):
         st.line_chart(df)
         
-    if st.sidebar.checkbox("Plotly charts"):        
-        
-        X1 = st.selectbox("select ",all_col,key='b')
-        X2 = st.selectbox("select",all_col,key = 'm')
-        X3 = st.selectbox("select",all_col)
-        hist_data = [df[X1], df[X2], df[X3]]
-        group_labels = [X1, X2, X3]
-        fig = ff.create_distplot(hist_data, group_labels, bin_size=[.1, .25, .5])
-        st.plotly_chart(fig, use_container_width=True)
+    
        
     if st.sidebar.checkbox("map"):
         X1 = st.selectbox("select ",all_col,key='j')
