@@ -21,7 +21,7 @@ choices = st.sidebar.selectbox(
     ('Show Data','Analysis', 'Visualize','Advanced')
 )
 data = st.file_uploader('________________________________________________________________________________________________',type =['csv','txt'])
-st.set_option('deprecation.showfileUploaderEncoding', False)
+
 
 
 if choices == 'Show Data':
