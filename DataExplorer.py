@@ -19,7 +19,8 @@ choices = st.sidebar.selectbox(
     'What would you like to perform?',
     ('Show Data','Analysis', 'Visualize','Advanced')
 )
-data = st.file_uploader('________________________________________________________________________________________________',type =['csv','txt'])
+da = st.file_uploader('________________________________________________________________________________________________',type =['csv','txt'])
+data = io.TextIOWrapper(da)
 
 
 if choices == 'Show Data':
