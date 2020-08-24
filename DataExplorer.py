@@ -20,8 +20,7 @@ choices = st.sidebar.selectbox(
     'What would you like to perform?',
     ('Show Data','Analysis', 'Visualize','Advanced')
 )
-da = st.file_uploader('________________________________________________________________________________________________',type =['csv','txt'])
-data = io.TextIOWrapper(da)
+data = st.file_uploader('________________________________________________________________________________________________',type =['csv','txt'])
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 
