@@ -21,6 +21,7 @@ choices = st.sidebar.selectbox(
 )
 da = st.file_uploader('________________________________________________________________________________________________',type =['csv','txt'])
 data = io.TextIOWrapper(da)
+st.set_option('deprecation.showfileUploaderEncoding', False)
 
 
 if choices == 'Show Data':
